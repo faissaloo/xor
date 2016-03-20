@@ -1,0 +1,6 @@
+///draw_window(x,y,xx,yy)
+draw_shadow(argument0-4,argument1-4,argument2+4,argument3+4,32)
+draw_set_color(make_color_rgb($80,$88,$00))
+draw_rectangle(argument0-4,argument1-4,argument2+4,argument3+4,false)
+draw_set_color(c_black)
+draw_rectangle(argument0,argument1,argument2,argument3,false)

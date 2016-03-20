@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<assets>
+  <Configs name="configs">
+    <Config>Configs\Default</Config>
+  </Configs>
+  <sprites name="sprites">
+    <sprite>sprites\backdrop_animation_spr</sprite>
+    <sprite>sprites\bitflip_spr</sprite>
+    <sprite>sprites\electric_animation_spr</sprite>
+    <sprite>sprites\spr_0</sprite>
+    <sprite>sprites\logo_spr</sprite>
+    <sprite>sprites\faissaloo_logo</sprite>
+  </sprites>
+  <sounds name="sound">
+    <sound>sound\pixelMarch_snd</sound>
+    <sound>sound\electricEffect_snd</sound>
+    <sound>sound\crunch_snd</sound>
+  </sounds>
+  <backgrounds name="background"/>
+  <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\draw_shadow.gml</script>
+    <script>scripts\draw_window.gml</script>
+    <script>scripts\dec2hex.gml</script>
+    <script>scripts\draw_bits.gml</script>
+    <script>scripts\bool2str.gml</script>
+    <script>scripts\draw_healthbar_color.gml</script>
+    <script>scripts\draw_menu.gml</script>
+    <scripts name="menus">
+      <script>scripts\exit_pause.gml</script>
+    </scripts>
+  </scripts>
+  <shaders name="shaders"/>
+  <fonts name="fonts">
+    <font>fonts\game_end_fnt</font>
+    <font>fonts\game_end_score_fnt</font>
+    <font>fonts\game_fnt</font>
+    <font>fonts\game_header_fnt</font>
+    <font>fonts\game_large_fnt</font>
+    <font>fonts\game_small_score_fnt</font>
+  </fonts>
+  <timelines name="timelines"/>
+  <objects name="objects">
+    <object>objects\backdrop_animation_obj</object>
+    <object>objects\brokenmistake_obj</object>
+    <object>objects\game_ctrl_obj</object>
+    <object>objects\death_summary_obj</object>
+    <object>objects\game_help_obj</object>
+    <object>objects\help_obj</object>
+    <object>objects\main_menu_obj</object>
+    <object>objects\options_menu_obj</object>
+    <object>objects\pause_menu_obj</object>
+    <object>objects\flogo_obj</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\init</room>
+    <room>rooms\rm_0</room>
+  </rooms>
+  <constants number="0"/>
+  <help>
+    <rtf>help.rtf</rtf>
+  </help>
+</assets>
