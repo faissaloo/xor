@@ -196,86 +196,85 @@ alarm[0]=fallblockdelay</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if not paused
-{
-//Scroll through the bits
-if keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord('A'))
-{
-position--
-if position&lt;0
-{
-position=length
-}
-}
-else if keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord('D'))
-{
-position++
-if position&gt;length
-{
-position=0
-}
-}
-
-//Flip the selected bit
-if (keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_up)) and (distancebetween&gt;=(sprite_height*image_yscale))
-{
-fallingbits=fallingbits^(1&lt;&lt;position)
-}
-
-//Let's speed things up a little if a user already has a solution ready
-if (keyboard_check(vk_down) or keyboard_check(ord('S'))) and alarm[0]&gt;5 and distancebetween&gt;sprite_height
-{
-alarm[0]=5
-}
-
-if pointeryoffset&gt;(sprite_height*image_yscale)/4
-{
-pointeryinc--
-}
-else if pointeryoffset&lt;0
-{
-pointeryinc++
-}
-
-//Pause menu
-if keyboard_check_pressed(vk_escape)
-{
-paused=true
-global.remainingfalltime=game_ctrl_obj.alarm[0]
-instance_create(x,y,pause_menu_obj)
-alarm[0]=-1
-alarm[1]=-1
-}
-
-pointeryoffset+=pointeryinc
-
-if electric_animation_index&lt;sprite_get_number(electric_animation_spr)
-{
-electric_animation_index++
-}
-else
-{
-electric_animation_index=0
-}
-
-if spawnedItemAlpha&lt;1
-{
-spawnedItemAlpha+=0.025
-}
-
-if health&lt;=0
-{
-dealth_obj=instance_create(x,y,death_summary_obj)
-dealth_obj.level=level
-instance_destroy()
-}
-
-if healthbarExpansion&lt;room_width/4*2
-{
-healthbarExpansion+=10
-}
-}
-</string>
+            <string>if not paused&#13;
+{&#13;
+//Scroll through the bits&#13;
+if keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord('A'))&#13;
+{&#13;
+position--&#13;
+if position&lt;0&#13;
+{&#13;
+position=length&#13;
+}&#13;
+}&#13;
+else if keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord('D'))&#13;
+{&#13;
+position++&#13;
+if position&gt;length&#13;
+{&#13;
+position=0&#13;
+}&#13;
+}&#13;
+&#13;
+//Flip the selected bit&#13;
+if (keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_up)) and (distancebetween&gt;=(sprite_height*image_yscale))&#13;
+{&#13;
+fallingbits=fallingbits^(1&lt;&lt;position)&#13;
+}&#13;
+&#13;
+//Let's speed things up a little if a user already has a solution ready&#13;
+if (keyboard_check(vk_down) or keyboard_check(ord('S'))) and alarm[0]&gt;5 and distancebetween&gt;sprite_height&#13;
+{&#13;
+alarm[0]=5&#13;
+}&#13;
+&#13;
+if pointeryoffset&gt;(sprite_height*image_yscale)/4&#13;
+{&#13;
+pointeryinc--&#13;
+}&#13;
+else if pointeryoffset&lt;0&#13;
+{&#13;
+pointeryinc++&#13;
+}&#13;
+&#13;
+//Pause menu&#13;
+if keyboard_check_pressed(vk_escape)&#13;
+{&#13;
+paused=true&#13;
+global.remainingfalltime=game_ctrl_obj.alarm[0]&#13;
+instance_create(x,y,pause_menu_obj)&#13;
+alarm[0]=-1&#13;
+alarm[1]=-1&#13;
+}&#13;
+&#13;
+pointeryoffset+=pointeryinc&#13;
+&#13;
+if electric_animation_index&lt;sprite_get_number(electric_animation_spr)&#13;
+{&#13;
+electric_animation_index++&#13;
+}&#13;
+else&#13;
+{&#13;
+electric_animation_index=0&#13;
+}&#13;
+&#13;
+if spawnedItemAlpha&lt;1&#13;
+{&#13;
+spawnedItemAlpha+=0.025&#13;
+}&#13;
+&#13;
+if health&lt;=0&#13;
+{&#13;
+dealth_obj=instance_create(x,y,death_summary_obj)&#13;
+dealth_obj.level=level&#13;
+instance_destroy()&#13;
+}&#13;
+&#13;
+if healthbarExpansion&lt;room_width/4*2&#13;
+{&#13;
+healthbarExpansion+=10&#13;
+}&#13;
+}</string>
           </argument>
         </arguments>
       </action>
